@@ -2,8 +2,122 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-h1 {
-    font-size: 24px;
+.container {
+    display: grid;
+    grid-template-rows: auto 2000px auto;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2524;
+    z-index: 9;
+}
+
+.logo {
+    color: #d2ecf5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+.menu ul li {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.menu ul li a {
+    display: block;
+    width: 100%;
+    color: #fbf7f4;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #444;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    background-color: #5ed2ff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+        align-items: center;
+        position: absolute;
+        right: 0;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #2a2524;
+        text-align: center;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @keyframes openMenu {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            top: 60px;
+            height: min-content;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes closeMenu {
+        from {
+            top: 60px;
+            height: min-content;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            height: 0;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        background-color: #5ed2ff;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    .menu.active {
+        animation: openMenu 0.5s ease-in-out forwards;
+    }
+
+    .menu.inactive {
+        animation: closeMenu 0.5s ease-in-out forwards;
+    }
 }
