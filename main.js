@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector(".menu");
     const navbar = document.querySelector(".navbar");
 
-    function toggleMenu(event) {
-        event.stopPropagation();
-        menu.classList.toggle("active");
-        menu.classList.toggle("inactive");
+    function openMenu() {
+        menu.classList.add("active");
+        menu.classList.remove("inactive");
     }
 
     function closeMenu() {
@@ -14,6 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.add("inactive");
     }
 
+    function toggleMenu(event) {
+        event.stopPropagation();
+        if (menu.classList.contains("active")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+
+    
     document.addEventListener("click", function (event) {
         if (!menu.contains(event.target) && !navbar.contains(event.target)) {
             closeMenu();
@@ -25,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             closeMenu();
         }
     });
-    
+
     menuIcon.addEventListener("click", toggleMenu);
+    
 });
