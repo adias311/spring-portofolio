@@ -65,6 +65,8 @@
 
 /* Home Page */
 
+/* Content */
+
 .home-page {
     display: grid;
     grid-template-columns: 45% auto;
@@ -82,7 +84,6 @@
     background-position: right top;
     background-size: 100%;
 }
-
 
 .title {
     margin-bottom: 2.5vw;
@@ -114,10 +115,76 @@
 }
 
 .description p {
-    font-size: 1.35vw;
+    font-size: 1.4vw;
     max-width: 88%; 
     word-wrap: break-word;
     color: #d9cdcd;
+}
+
+
+/* Skills */
+
+.skills-page {
+    padding: 5vw;
+    background-color: #1a1624;
+}
+
+.skills-page .content {
+    padding: 3vw 4vw;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #384759;
+}
+
+.skills-page .title {
+    width: 100%;
+}
+
+.skills-page .title h1 {
+    font-size: 2.1vw;
+    font-weight: 300;
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1624;
+}
+
+.skills {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.card {
+    background-color: #e3ebf0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.card-header {
+    background-color: #2d4373;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    padding: 8px;
+    border-bottom: 1px solid #cbc9c9;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
 }
 
 
@@ -237,6 +304,16 @@
         aspect-ratio: 10/6;
         background-size: cover;
     }
-    
+
+    /* Skills */
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-page .title h1 {
+        font-size: 4.5vw;
+    }
     
 }
