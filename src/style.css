@@ -10,6 +10,8 @@
     grid-template-rows: auto min-content auto;
 }
 
+/* ============================================================================================ */
+
 /* Navbar */
 
 .navbar {
@@ -62,6 +64,8 @@
     padding: 5px;
     border-radius: 5px;
 }
+
+/* ============================================================================================ */
 
 /* Home Page */
 
@@ -121,6 +125,7 @@
     color: #d9cdcd;
 }
 
+/* ============================================================================================ */
 
 /* Skills */
 
@@ -187,10 +192,12 @@
     border-bottom: none;
 }
 
+/* ============================================================================================ */
+
 /* Projects */
 
 .projects-page {
-    padding: 0 5vw;
+    padding: 0 5vw 5vw 5vw;
 }
 
 .projects-page .card img { 
@@ -224,6 +231,61 @@
     background-color: #0056b3
 }
 
+/* ============================================================================================ */
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 1vw 0;
+    background-color: #396482;
+    position: relative;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #c3cad6;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #47ce32;
+}
+
+.footer p {
+    font-size: 14px;
+    color: white;
+}
+
+.back-to-top {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    background-color: #be4646;
+    padding: 12px;
+    border-radius: 15%;
+    text-decoration: none;
+    transition: ease-in 0.3s;
+}
+
+.back-to-top:hover {
+    color: black;
+}
+
+.back-to-top:hover {
+    background-color: #65e935;
+}
+
+
+
+/* ============================================================================================ */
 
 /* Mobile Responsive */
 
@@ -287,6 +349,8 @@
         animation: closeMenu 0.5s ease-in-out;
     }
 
+    /* ============================================================================================ */
+
     /* Content */
 
     #home-page {
@@ -342,6 +406,8 @@
         background-size: cover;
     }
 
+    /* ============================================================================================ */
+
     /* Skills */
 
     .skills , .projects {
@@ -352,5 +418,14 @@
     .skills-page .title h1 , .projects-page .title h1 {
         font-size: 4.5vw;
     }
+
+    /* ============================================================================================ */
+
+    /* Footer */
+
+    .back-to-top {
+        padding: 1.6vw;
+    }
+
     
 }

@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     
     <div class="container">
 
-        <section class="navbar" id="navbar">
+        <nav class="navbar" id="navbar">
             <div class="logo">
                 <a href="https://mochallate.vercel.app/" target="_blank" rel="noopener noreferrer">
                     Synesthesia
@@ -29,7 +30,7 @@
                 </ul>
             </div>
             <img class="menu-icon" src="/assests/menu.svg">
-        </section>
+        </nav>
 
         <section class="home-page" id="home-page">
             <div class="content">
@@ -139,9 +140,21 @@
             </div>
         </section>
 
-        <section class="footer" id="footer">
-            <p>&copy; 2023 Synesthesia. All rights reserved.</p>
-        </section>
+        <footer class="footer" id="footer">
+            <div class="social-icons">
+                <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>
+                &copy; 
+                <script>document.write(new Date().getFullYear());</script> 
+                Synesthesia. All rights reserved.
+            </p>
+            <a class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </footer>
 
     </div>
 
