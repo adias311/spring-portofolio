@@ -272,18 +272,14 @@
     padding: 12px;
     border-radius: 15%;
     text-decoration: none;
+    cursor: pointer;
     transition: ease-in 0.3s;
 }
 
 .back-to-top:hover {
     color: black;
-}
-
-.back-to-top:hover {
     background-color: #65e935;
 }
-
-
 
 /* ============================================================================================ */
 
